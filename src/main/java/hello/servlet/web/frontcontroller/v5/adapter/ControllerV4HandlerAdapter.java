@@ -1,7 +1,6 @@
 package hello.servlet.web.frontcontroller.v5.adapter;
 
 import hello.servlet.web.frontcontroller.ModelView;
-import hello.servlet.web.frontcontroller.MyView;
 import hello.servlet.web.frontcontroller.v4.ControllerV4;
 import hello.servlet.web.frontcontroller.v5.MyHandlerAdapter;
 
@@ -31,10 +30,6 @@ public class ControllerV4HandlerAdapter implements MyHandlerAdapter {
         modelView.setModel(model);
 
         return modelView;
-    }
-
-    private MyView viewResolver(String viewName) {
-        return new MyView("/WEB-INF/views/" + viewName + ".jsp");
     }
 
     private Map<String, String> createParamMap(HttpServletRequest request) {
