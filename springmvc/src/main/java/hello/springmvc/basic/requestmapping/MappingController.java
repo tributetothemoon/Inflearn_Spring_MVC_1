@@ -81,7 +81,7 @@ public class MappingController {
     /**
      * Accept 헤더 기반으로 매핑한다.
      */
-    @PostMapping(value="/mapping-produce", consumes = MediaType.TEXT_HTML_VALUE)
+    @PostMapping(value="/mapping-produce", produces = MediaType.TEXT_HTML_VALUE)
     public String mappingProduces() {
         log.info("mappingProduces");
         return "ok";
